@@ -20,6 +20,22 @@ public class Ejemplo {
 			}
 			System.out.printf("\n");
 		}
+		
+		for (int fila = 0; fila < n; fila++) {
+			for (int columna = 0; columna < n; columna++) {
+				if(fila==0 || fila ==(n-1)) {
+					System.out.printf("*");
+				}else {
+					if(columna == 0 || columna ==(n-1) ) {
+						System.out.printf("*");
+					}else {
+						System.out.printf(" ");
+					}
+				}
+			}
+			System.out.printf("\n");
+		}
+		
 	}
 
 }
