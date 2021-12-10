@@ -2,6 +2,7 @@ package com.desafiolatam.f20211210;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListaAlimentos {
@@ -29,7 +30,19 @@ public class ListaAlimentos {
 			//acceder por indice a cada elemento
 			System.out.println("* "+comidas.get(i));
 		}
-
+		System.out.println();
+		
+		for (Iterator iterator = comidas.iterator(); iterator.hasNext();) {
+			iterator.next();
+			iterator.next();
+			iterator.next();
+			iterator.next();
+		
+			String alimento = (String) iterator.next();//cazuela
+			
+			System.out.println("* "+alimento );
+		}
+		System.out.println(comidas);
 	}
 	
 	/*
