@@ -80,7 +80,25 @@ public class ArreglosDinamicos {
 		Collections.reverse(numeros);
 		System.out.println(numeros);
 		
-
+		
+		ArrayList<String> alumnosRepitentes = new ArrayList<String>();
+		
+		System.out.println(alumnos);
+		alumnos.add("Israel");
+		//NUNCA HACER ESTO; NO ES UNA COPIA
+		//alumnosRepitentes = alumnos;
+		alumnosRepitentes.addAll(alumnos);
+		
+		System.out.println("alumnos "+alumnos);
+		System.out.println("repitentes "+alumnosRepitentes);
+		
+		alumnos.add("German");
+		System.out.println("alumnos "+alumnos);
+		System.out.println("repitentes "+alumnosRepitentes);
+		
+		
+		
+		
 	}
 
 }
