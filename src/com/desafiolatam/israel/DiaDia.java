@@ -1,4 +1,4 @@
-package com.desafiolatam.f20211213;
+package com.desafiolatam.israel;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -25,25 +25,25 @@ public class DiaDia {
 		//creamos un archivo de tipo File y asignamos la ruta a crear o validar si existe 
 		File directorio = new File(ruta);
 		
-		if(directorio.exists()) {
-			System.out.println("El directorio existe");
-		}else {
-			System.out.println("El directorio NO existe");
+		if(!directorio.exists()) {
 			//lo crea en caso de no existir
 			directorio.mkdirs();
+			System.out.println("El directorio creado...");
+			
+			File models = new File(ruta+"/models");
+			models.mkdir();
+			System.out.println("Package Model creado...");
 		}
 		
 		//creamos una variable de tipo FILE, que nos servira para crear un nuevo archivo 
 		File archivo = new File(ruta+"/Main.java");
 		
 		// si existe no hace nada solo imprime el mensaje
-		if(archivo.exists()) {
-			System.out.println("El archivo existe");
-		}else {// en acaso contrario lo crea
-			System.out.println("El archivo NO existe");
+		if(!archivo.exists()) {						
 			try {
 				//crear archivo si no existe
 				archivo.createNewFile();
+				System.out.println("Archivo Main.java creado...");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

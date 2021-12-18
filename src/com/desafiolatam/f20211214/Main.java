@@ -8,8 +8,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		//ejecutar();//llamado al metodo
-		 ArrayList<Integer> numeros = misNumeros();
+		 //ArrayList<Integer> numeros = misNumeros();
 		//ingresarNumero(numeros);
+		obtenerAlumnos();
 	}
 
 	public static void ejecutar() {
