@@ -58,13 +58,12 @@ public class Auto {
 	public void aumentarVelocidad(float velocidad) {		
 		this.velocidad = this.velocidad + velocidad;
 	}
-	
+	//sobrecarga del metodo aumentarVelocidad con 2 parametros
 	public void aumentarVelocidad(boolean acelerar, boolean frenar) {
 		if(acelerar) {
 			this.velocidad = this.velocidad + 15;
 		}else if(frenar) {
 			this.velocidad = this.velocidad - 10;
-		}
-		
+		}		
 	}
 }
