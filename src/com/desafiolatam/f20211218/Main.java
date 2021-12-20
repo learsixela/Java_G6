@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.desafiolatam.f20211218.models.Cargador;
 import com.desafiolatam.f20211218.models.Celular;
+import com.desafiolatam.f20211218.models.SmartPhone;
 
 public class Main {
 
@@ -43,9 +44,7 @@ public class Main {
 		System.out.println("*************");
 		
 		//intancia de clase con objeto colaborador
-		
-
-		
+				
 		Celular cellColaboracion = new Celular("Xiaomi","1245","Azul", null);
 		System.out.println(cellColaboracion.toString());
 		
@@ -60,6 +59,21 @@ public class Main {
 		cellColaboracion.getCargador().setTipoConector("AA");
 		
 		System.out.println(cellColaboracion.toString());
+		System.out.println("*************");
+		
+		//instancia clase hijo SmartPhone
+		SmartPhone smartPhone =  new SmartPhone();
+		//asignar valores a los atributos
+		smartPhone.setColor("Rojo");
+		smartPhone.setModelo("Chino");
+		//smartPhone.setCargador(cargador);
+		smartPhone.setCamaraPixeles(16.0f);
+		smartPhone.setTarjetaMemoriaTamanio(32.0f);
+		
+		System.out.println(smartPhone.toString());
+		
+		smartPhone.llamar("German");
+		smartPhone.fotografiar();
 		
 	}
 

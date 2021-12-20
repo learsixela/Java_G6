@@ -65,8 +65,9 @@ public class Celular {
 	public void llamar(String persona) {
 		System.out.println("Llamando a la persona "+ persona);
 	}
+	
 	public void fotografiar() {
-		
+		System.out.println("fotografiar en Celular");
 	}
 	public void buscarContacto() {
 		
