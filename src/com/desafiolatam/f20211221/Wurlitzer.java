@@ -7,14 +7,25 @@ public class Wurlitzer {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		// arraylist con canciones
-		ArrayList<String> canciones = new ArrayList<String>();
+		/*ArrayList<String> canciones = new ArrayList<String>();
 		canciones.add("1.- Tangananica Tanganana");
-		canciones.add("2.-Mi equilibrio espiritual");
+		canciones.add("2.- Mi equilibrio espiritual");
 		canciones.add("3.- Mi muñeca me hablo");
 		canciones.add("4.- Señora interesante");
-		canciones.add("5.- Son pololos");
+		canciones.add("5.- Son pololos");*/
+		String[] canciones = {"1.- Tangananica Tanganana",
+				"2.- Mi equilibrio espiritual",
+				"3.- Mi muñeca me hablo",
+				"4.- Señora interesante",
+				"5.- Son pololos"
+		};
+		System.out.println("1.- Tangananica Tanganana\n"+
+				"2.- Mi equilibrio espiritual\n"+
+				"3.- Mi muñeca me hablo\n"+
+				"4.- Señora interesante\n"+
+				"5.- Son pololos");
 
-		System.out.println(canciones);
+		//System.out.println(canciones);//para el arreglo dinamico
 		try {
 			// solicitar el ingreso de la cancion a escuchar
 			System.out.println("Ingrese el numero de la cancion a reproducir");
@@ -28,8 +39,9 @@ public class Wurlitzer {
 				// si lo es, retornar la canción.
 				// Controlar todas las Exception posibles.
 
-				String cancionAReproducir = canciones.get(cancion - 1);
+				String cancionAReproducir =canciones[cancion - 1]; //canciones.get(cancion - 1);
 				System.out.println("La cancion a reproducir es: " + cancionAReproducir);
+				
 			}else {
 				System.out.println("Opcion no valida");
 			}
