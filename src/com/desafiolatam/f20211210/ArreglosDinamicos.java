@@ -18,6 +18,13 @@ public class ArreglosDinamicos {
 		alumnos.add("Hector");
 		alumnos.add("Isabel");
 		// alumnos.add("German");
+		
+		//acceder a un elemento por posicion
+		alumnos.get(0);//German
+		alumnos.get(1);//Isra
+		alumnos.get(2);//Hector
+		alumnos.get(3);//Isabel
+		
 
 		System.out.println(alumnos.size());// 4
 		System.out.println(alumnos);
