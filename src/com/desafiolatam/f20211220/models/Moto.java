@@ -26,17 +26,22 @@ public class Moto extends Auto{
 		this.casco = casco;
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		return "Moto [casco=" + casco + ", getColor()=" + getColor() + ", getVelocidad()=" + getVelocidad()
 				+ ", getRuedas()=" + getRuedas() + ", getMotor()=" + getMotor() + "]";
-	}
+	}*/
 	
 	@Override
 	public void aumentarVelocidad() {
 		setVelocidad(getVelocidad() + 12);
 	}
 
+	//sobrecarga del metodo aumentarVelocidad
+	public void aumentarVelocidad(float velocidad) {		
+		setVelocidad(getVelocidad() + velocidad);
+		System.out.println("Moto "+getVelocidad());
+	}
 
 	
 	

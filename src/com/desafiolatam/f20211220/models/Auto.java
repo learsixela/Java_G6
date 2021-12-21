@@ -1,12 +1,16 @@
 package com.desafiolatam.f20211220.models;
 
+import com.desafiolatam.f20211218.models.Celular;
+
 public class Auto {
 	//atributos
 	private String color;
 	private float velocidad;//velocidad = 0.0
 	private int ruedas;
 	private float motor;    // motor = null
-	
+	//colaboracion
+	private PortaBicicleta portaBici;
+
 	//constructores
 	public Auto() {
 		super();
@@ -20,6 +24,12 @@ public class Auto {
 	}
 	
 	//getters&setters
+	public PortaBicicleta getPortaBici() {
+		return portaBici;
+	}
+	public void setPortaBici(PortaBicicleta portaBici) {
+		this.portaBici = portaBici;
+	}
 	public String getColor() {
 		return color;
 	}
@@ -44,10 +54,10 @@ public class Auto {
 	public void setMotor(float motor) {
 		this.motor = motor;
 	}
-	//metodos
 	@Override
 	public String toString() {
-		return "Auto [color=" + color + ", velocidad=" + velocidad + ", ruedas=" + ruedas + ", motor=" + motor + "]";
+		return "Auto [color=" + color + ", velocidad=" + velocidad + ", ruedas=" + ruedas + ", motor=" + motor
+				+ ", portaBici=" + portaBici + "]";
 	}
 
 	public void aumentarVelocidad() {		
@@ -58,12 +68,16 @@ public class Auto {
 	public void aumentarVelocidad(float velocidad) {		
 		this.velocidad = this.velocidad + velocidad;
 	}
-	//sobrecarga del metodo aumentarVelocidad con 2 parametros
+	
 	public void aumentarVelocidad(boolean acelerar, boolean frenar) {
 		if(acelerar) {
 			this.velocidad = this.velocidad + 15;
 		}else if(frenar) {
 			this.velocidad = this.velocidad - 10;
 		}		
+	}
+	
+	public void otroMetodo(Celular celular) {
+		System.out.println("otro metodo "+celular);
 	}
 }
