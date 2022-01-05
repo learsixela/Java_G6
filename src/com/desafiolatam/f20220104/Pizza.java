@@ -12,34 +12,52 @@ public class Pizza {
 		pizza.add("queso");
 		pizza.add("salsa");
 		pizza.add("queso");
-		
-		int vecesEncontrado = 0;
-		boolean existe = false;
-				
-		System.out.println("Ingrese un ingrediente");
-		String ingrediente = sc.nextLine();//queso
-		
-		//recorrer un arreglo dinamico
-		for (int i = 0; i < pizza.size(); i++) {
-			if(pizza.get(i).equalsIgnoreCase(ingrediente)) {
-				//System.out.println("Ingrediente ya existe en la pizza");
-				vecesEncontrado= vecesEncontrado + 1;//incrementando en 1
-				existe = true;
+		int opcion = 0;
+
+		do {
+			int vecesEncontrado = 0;
+
+			boolean existe = false;
+
+			System.out.println("Ingrese un ingrediente");
+			String ingrediente = sc.nextLine();// queso
+
+			// recorrer un arreglo dinamico
+			for (int i = 0; i < pizza.size(); i++) {
+				if (pizza.get(i).equalsIgnoreCase(ingrediente)) {
+					// System.out.println("Ingrediente ya existe en la pizza");
+					vecesEncontrado = vecesEncontrado + 1;// incrementando en 1
+					existe = true;
+				}
 			}
-		}
-		System.out.println("vecesEncontrado "+vecesEncontrado);
-		
-		if(vecesEncontrado == 0) {//if(existe==false) {
-			pizza.add(ingrediente);
-		} else {
-			System.out.println("Ingrediente ya existe en la pizza");
-			//pizza.clear();//elimina todo los elemento
-			pizza.remove(3);//elimina segun indice
-			pizza.remove("queso");//elimina la primera coicidencia
-		}
-		
+			
+			for (String elemento : pizza) {
+				if (elemento.equalsIgnoreCase(ingrediente)) {
+					vecesEncontrado = vecesEncontrado + 1;
+					existe = true;
+				}
+			}
+			
+			System.out.println("vecesEncontrado " + vecesEncontrado);
+
+			if (vecesEncontrado == 0) {// if(existe==false) {
+				pizza.add(ingrediente);
+			} else {
+				System.out.println("Ingrediente ya existe en la pizza");
+				// pizza.clear();//elimina todo los elemento
+				pizza.remove(3);// elimina segun indice
+				pizza.remove("queso");// elimina la primera coicidencia
+			}
+			System.out.println();
+			System.out.println("* ¿Ingresara otro elemento? * ");
+			System.out.println("0.- SI");
+			System.out.println("1.- NO");
+			opcion = sc.nextInt();
+			sc.nextLine();
+			System.out.println();
+		} while (opcion == 0);
 		System.out.println(pizza);
-		
+
 	}
 
 }
