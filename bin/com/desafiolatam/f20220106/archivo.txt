@@ -1,0 +1,4 @@
+hola clase 
+aprendiendo Java 
+64
+Escribiendo en archivos

@@ -8,7 +8,7 @@ public class Archivos {
 
 	public static void main(String[] args) {
 		crearDirectorio();
-		//crearArchivo();
+		crearArchivo();
 	}
 
 	public static void crearDirectorio() {
