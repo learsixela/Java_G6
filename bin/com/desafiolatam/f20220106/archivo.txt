@@ -1,4 +1,10 @@
-hola clase 
-aprendiendo Java 
-64
-Escribiendo en archivos
+Perro
+Gato
+Juan
+Daniel
+Juan
+Gato
+Perro
+Camila
+
+Camila
